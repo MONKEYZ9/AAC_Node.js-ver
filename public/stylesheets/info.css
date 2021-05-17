@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.infoBox{
+	width: 410px;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+	font-size: 12pt;
+	color: #878787;
+	line-height: 12pt;
+}
+
+.infoTitle{
+	font-size: 30pt;
+	color: #606060;
+	text-align: center;
+	height: 80px;
+}
+
+.infoBox input {
+	width: 399px;
+	height: 36px;
+	margin-bottom: 10px;
+	outline: none;
+	border: none;
+	font-size: 12pt;
+	color: #878787;
+	line-height: 36px;
+	padding-left: 10px;
+}
+.serialChange {
+	width: 410px;
+	height: 36px;
+	background-color: black;
+	color: white;
+	font-size: 14pt;
+	text-align: center;
+	margin-bottom: 10px;
+	line-height: 36px;
+	transition: all 1s ease;
+ }
+
+.serialChange:hover{
+	cursor: pointer;
+	text-decoration: underline;
+	background-color: #0751cc;
+}
+
+
+
+
+
+
+
+
+
+
+
+

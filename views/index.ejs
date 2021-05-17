@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<% include ./layout/header %>
+</head>
+<body>
+
+	<% include ./layout/navbar %>
+
+	<div id="siteContentArea">
+		<div class="weatherToday">
+			<div class="title">오늘의 날씨</div>
+			<div class="middle">
+				<div class="weatherValue"><span class="mark" id="feel_like"></span></div>
+				<div class="weatherWord">체감 온도</div>
+				<div class="line"></div>
+			</div> 
+			<div class="middle">
+				<div class="weatherValue"><span class="mark" id="humidity"></span></div>
+				<div class="weatherWord">상대 습도</div>
+			</div> 
+		</div>
+	</div>
+	<% include ./layout/footer %>
+
+</body>
+</html>

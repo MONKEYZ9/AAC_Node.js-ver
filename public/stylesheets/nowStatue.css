@@ -1,0 +1,83 @@
+@charset "UTF-8";
+.weatherToday{
+	width: 410px;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	background-color: white;
+}
+.title{
+	height: 140px;
+	line-height: 140px;
+	color: #5B94EA;
+	font-size: 26pt;
+	text-align: center;
+}
+
+.middle{
+	width: 205px;
+	height: 70px;
+	float: left;
+	position: relative;
+}
+.weatherValue{
+	position: absolute;
+	
+	width: 205px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	font-weight: 600;
+	color: black;
+	font-size: 28pt;
+}
+.mark{
+	font-weight: 600;
+	color: #878787;
+	font-size: 17pt;
+}
+
+.weatherWord{
+	position: absolute;
+	top: 50px;
+	width: 205px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-weight: 600;
+	color: #878787;
+	font-size: 15pt;
+}
+.line{
+	position: absolute;
+	left: 205px;
+	width: 1px;
+	height: 70px;
+	background-color: #cdcdcd;
+}
+.end{
+	width: 410px;
+	height: 150px;
+	position: relative;
+	float: left;
+}
+.end button{
+	position: absolute;
+	top: 57px;
+	left: 72px;
+	width: 270px;
+	height: 36px;
+	line-height: 36px;
+	border: #5B94EA solid 1px;
+	color: #5B94EA;
+	font-size: 13pt;
+	background-color: white;
+	transition: all 1s ease;
+	outline: none;
+}
+.end button:hover{
+	color: white;
+	background-color: #5B94EA;
+	
+}

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+.weatherTodayAfterJoin{
+	width: 410px;
+	height: 475px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	background-color: white;
+}
+.showCurrentSettingsImg {
+	position: relative;
+	height: 130px; 
+	width: 410px;
+	float: left;
+}
+.showCurrentSettings {
+	position: relative;
+	float: left;
+	top: -130px;
+	padding-top: 35px;
+	height: 95px; 
+	width: 410px;
+	text-align: center;
+	
+	color: #aac8ee;
+	font-size: 11pt;
+	line-height: 15pt;
+	font-weight: 600;
+
+}
+.showCurrentSettings span{
+	color: white;
+	font-size: 18pt;
+	line-height: 24pt;
+	font-weight: 600;
+}
+.chooseSettings{
+	padding-left: 72px;
+	position: relative;
+	float: left;
+	top: -130px;
+	
+	color: #5B94EA;
+	font-size: 14pt;
+	line-height: 20pt;
+	font-weight: 600;
+}
+#div2 {
+	position: relative;
+	float: left;
+	top: -130px;
+}
+#div2 input {
+	margin-left: 5px;
+	margin-right: 50px;
+	width: 130px;
+	height: 20px;
+	border: none; 
+	border-bottom: #cdcdcd solid 2px;
+}
+
+.chooseSettingsEnd {
+	position: relative;
+	top: -115px;
+	float: left;
+	width: 410px;
+}
+.accBtn{
+	position: absolute;
+	left: 72px;
+	width: 270px;
+	height: 36px;
+	line-height: 36px;
+	border: #5B94EA solid 1px;
+	color: #5B94EA;
+	font-size: 13pt;
+	background-color: white;
+	transition: all 1s ease;
+	outline: none;
+}
+.accBtn:hover{
+	color: white;
+	background-color: #5B94EA;
+	
+}

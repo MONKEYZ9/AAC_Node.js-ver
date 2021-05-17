@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.showInfoLogoutBox{
+	width: 410px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 45px;
+}
+.startAACBtn, .myInfoBtn, .logoutBtn {
+	margin-top: 8px;
+	width: 100%;
+	line-height: 36px;
+	height: 36px;
+	color: white;
+	font-size: 13pt;
+	outline: none;
+	border: none;
+	transition: all 1s ease;
+}
+.startAACBtn {
+	background-color: #5b94ea; 
+	
+}
+.myInfoBtn, .logoutBtn {
+	background-color: #bdbdbd; 
+	
+}
+.startAACBtn:hover, .myInfoBtn:hover, .logoutBtn:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
