@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const jwtMiddleware = require('./module/jwtMiddleware');
+
 
 var indexRouter = require('./routes/index');
 
@@ -19,6 +21,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 모든 라우터에 접근할때 사용자 인지정보를 확인하기 위해서 라우터 앞단에 붙여줌으로 확인한다는거야 // 이렇게 했으면 navbar.ejs로 가서 로그인했을때는 다르게 나오게 설정해야해
+app.use(jwtMiddleware);
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler

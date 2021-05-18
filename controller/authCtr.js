@@ -1,7 +1,7 @@
 const User = require("../model/auth"); // User 스키마를 불러오는 거
 
 const bcrypt = require("bcrypt"); // 패스워드 암호화 하는 것
-// const secretKey = require("../config/secretKey.json"); //
+const secretKey = require("../config/secretKey.json"); //
 const jwt = require("jsonwebtoken");
 
 
@@ -26,36 +26,36 @@ const authCtr = {
     await user.save(); // 저장을 해주고
     res.redirect("/");
   },
-  // login: async (req, res) => {
-  //   const { username, password } = req.body;
-  //   const user = await User.findOne({ username: username });
-  //   if (!user) {
-  //     res.status(500).send("user not found!!");
-  //     return;
-  //   }
+  login: async (req, res) => {
+    const { username, password } = req.body;
+    const user = await User.findOne({ username: username });
+    if (!user) {
+      res.status(500).send("user not found!!");
+      return;
+    }
 
-  //   const valid = await bcrypt.compare(password, user.password);
-  //   if (!valid) {
-  //     res.status(500).send("password invalid");
-  //   }
-  //   const data = user.toJSON();
-  //   delete data.password;
-  //   const token = jwt.sign(
-  //     {
-  //       _id: data._id,
-  //       username: data.username,
-  //     },
-  //     secretKey.key,
-  //     {
-  //       expiresIn: "7d",
-  //     }
-  //   );
-  //   res.cookie("access_token", token, {
-  //     maxAge: 1000 * 60 * 60 * 24 * 7,
-  //     httpOnly: true,
-  //   });
-  //   res.redirect("/");
-  // },
+    const valid = await bcrypt.compare(password, user.password);
+    if (!valid) {
+      res.status(500).send("password invalid");
+    }
+    const data = user.toJSON();
+    delete data.password;
+    const token = jwt.sign(
+      {
+        _id: data._id,
+        username: data.username,
+      },
+      secretKey.key,
+      {
+        expiresIn: "7d",
+      }
+    );
+    res.cookie("access_token", token, {
+      maxAge: 1000 * 60 * 60 * 24 * 7,
+      httpOnly: true,
+    });
+    res.redirect("/");
+  },
 };
 
 module.exports = authCtr;

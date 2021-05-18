@@ -1,4 +1,4 @@
-import data from "../javacriptsKey/keyConfig.js";
+import data from "./keyConfig.js";
 
 const openWeatherKey = data[0]['openWeather']
 const googleMapKey = data[0]['googleMap']
@@ -17,10 +17,8 @@ $.getJSON(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${location}&
         $('#humidity').html(JSON.stringify(json["main"]["humidity"]) + ' %');
     });
 
-});
+}); 
     var myPoint = new kakao.maps.LatLng(latitude, longitude);
-      
-      
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
     var options = { //지도를 생성할 때 필요한 기본 옵션
         center : myPoint, //지도의 중심좌표.
