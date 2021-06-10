@@ -4,9 +4,14 @@ const upload = require("../../module/multer");
 const postCtr  = require("../../controller/postCtr");
 const checkUser = require("../../module/checkUser");
 
+router.get("/uploadIndex", checkUser, (req, res) => {
+    res.render("uploadIndex");
+});
+
 router.get("/upload", checkUser, (req, res) => {
     res.render("upload");
 });
+
 // 디테일을 받아오는걸 이미 했는데
 // router.get("/:id", (req, res) => {
 //     res.render("detail");

@@ -2,7 +2,7 @@
 <!-- <div id="rv" style="width: 410px; height: 250px;"></div> -->
 <div class="loginBox">
   <% if(isAuthenticated.username) { %>
-    <button onclick="location.href='/posts/upload'" style="width:100%;margin-top:10px;" class="loginBtn ui secondary button">게시판</button>
+    <button onclick="location.href='/posts/uploadIndex'" style="width:100%;margin-top:10px;" class="loginBtn ui secondary button">게시판</button>
     <form action="/auth/logout" method="post">
       <button type="submit" style="width:100%;margin-top:10px;" class="loginBtn ui secondary button">로그아웃</button>
     </form>

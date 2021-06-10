@@ -55,8 +55,8 @@ const postCtr = {
   list: async (req, res) => {
     // Post 중에서 전체 게시물을 가져울거임
     const posts = await Post.find({});
-    // 이걸 index로 넘겨줄거임
-    res.render("index", { postList: posts });
+    // 이걸 uploadIndex 넘겨줄거임
+    res.render("uploadIndex", { postList: posts });
   },
   detail: async (req, res) => {
     // ejs를 보면 타이틀을 눌렀을때 아이디 값을 바탕으로 보여지게끔 해놨어
